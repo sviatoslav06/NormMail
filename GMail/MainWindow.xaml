@@ -1,0 +1,31 @@
+﻿<Window x:Class="GMail.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:GMail"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <DockPanel>
+        <Grid DockPanel.Dock="Top">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="auto"/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition/>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+            <TextBlock Margin="5">To :</TextBlock>
+            <TextBox Name="toBox" Grid.Column="1" VerticalContentAlignment="Center"></TextBox>
+            <TextBlock Grid.Row="1"  Margin="5">Theme :</TextBlock>
+            <TextBox Name="themeBox"  Grid.Column="1" Grid.Row="1" VerticalContentAlignment="Center"></TextBox>
+        </Grid>
+        <ToolBar DockPanel.Dock="Bottom" Padding="5">
+            <Button FontSize="18" Click="Button_Click">Send</Button>
+            <Button Margin="10,0,10,0" Click="Button_Click_1">Attach Files</Button>
+            <CheckBox Name="priority" Checked="priority_Checked" Unchecked="priority_Unchecked">Mark as Important</CheckBox>
+        </ToolBar>
+        <TextBox Name="txtBox" Margin="5" TextWrapping="Wrap" AcceptsReturn="True"></TextBox>
+    </DockPanel>
+</Window>
